@@ -14,14 +14,14 @@ function DeckView({deck}) {
     }
 
     return (
-        <div className="card">
+        <div className="card my-2">
             <div className="card-body">
                 <h5 className="card-title">{deck.name}</h5>
                 <h6 className="card-subtitle">{deck.cards.length} cards</h6>
                 <p className="card-text">{deck.description}</p>
-                <button className="btn btn-secondary" onClick={() => history.push(`/decks/${deck.id}`)}>View</button>
-                <button className="btn btn-primary" onClick={() => history.push(`/decks/${deck.id}/study`)}>Study</button>
-                <button className="btn btn-danger" onClick={() => handleDelete(deck.id)}>Delete</button>
+                <button className="btn btn-secondary mr-2" onClick={() => history.push(`/decks/${deck.id}`)}>View</button>
+                <button className="btn btn-primary mr-2" onClick={() => history.push(`/decks/${deck.id}/study`)}>Study</button>
+                <button className="btn btn-danger mr-2" onClick={() => handleDelete(deck.id)}>Delete</button>
             </div>
         </div>
     )

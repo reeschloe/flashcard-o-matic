@@ -42,16 +42,20 @@ function EditDeck() {
             </nav>
             <h2>Edit Deck</h2>
             <form onSubmit={handleSubmit}>
-                <label htmlFor="name" className="form-label">
-                    Name
-                    <input type="text" id="name" name="name" className="form-control" onChange={handleChange} value={Deck.name || ""}/>
-                </label>
-                <label htmlFor="description" className="form-label">
-                    Description
-                    <textarea id="description" name="description" className="form-control" onChange={handleChange} value={Deck.description || ""}/>
-                </label>
-                <button type="submit" className="btn btn-primary">Submit</button>
-                <button type="button" className="btn btn-secondary" onClick={() => history.push(`/decks/${deckId}`)}>Cancel</button>
+                <div className="form-group">
+                    <label htmlFor="name" className="form-label">
+                        Name
+                        <input type="text" id="name" name="name" className="form-control" onChange={handleChange} value={Deck.name || ""}/>
+                    </label>
+                </div>
+                <div className="form-group">
+                    <label htmlFor="description" className="form-label">
+                        Description
+                        <textarea id="description" name="description" className="form-control" onChange={handleChange} value={Deck.description || ""}/>
+                    </label>
+                </div>
+                <button type="submit" className="btn btn-primary mr-2">Submit</button>
+                <button type="button" className="btn btn-secondary mr-2" onClick={() => history.push(`/decks/${deckId}`)}>Cancel</button>
             </form>
         </div>
         )

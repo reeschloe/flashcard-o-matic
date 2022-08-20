@@ -14,18 +14,19 @@ function Cards({cards}) {
     }
 
     const handleNext = () => {
-        setCardIndex((currentIndex) => {
-            if (currentIndex === numberOfCards - 1) {
-                if(window.confirm("Restart cards?")) {
-                    return 0;
-                } else {
-                    history.push("/");
-                    return 0;
-                }
+        if (CardIndex === numberOfCards - 1) {
+            let confirmed = window.confirm("Restart cards?")
+            if(confirmed) {
+                setCardIndex(0)
             } else {
-                return currentIndex + 1
-            } 
-        })  
+                setCardIndex(0)
+                history.push("/");
+                
+            }
+
+        } else {
+            setCardIndex((currentIndex) => currentIndex + 1)
+        } 
         setSide("front")
     }
     
@@ -36,8 +37,8 @@ function Cards({cards}) {
             <div className="card-body">
                 <h5 className="card-title">Card {CardIndex + 1} of {numberOfCards}</h5>
                 <p className="card-text">{card && Side === "front" ? card.front : card.back}</p>
-                <button className="btn btn-secondary" onClick={handleFlip}>Flip</button>
-                {card && Side === "back" ? <button className="btn btn-primary" onClick={handleNext}>Next</button> : null}
+                <button className="btn btn-secondary mr-2" onClick={handleFlip}>Flip</button>
+                {card && Side === "back" ? <button className="btn btn-primary mr-2" onClick={() => handleNext()}>Next</button> : null}
             </div>
         </div>
     )

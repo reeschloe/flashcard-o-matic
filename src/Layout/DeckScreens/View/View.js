@@ -28,9 +28,9 @@ function View() {
             </nav>
             <h3>{Deck.name}</h3>
             <p>{Deck.description}</p>
-            <button type="button" className="btn btn-secondary" onClick={() => history.push(`${url}/edit`)}>Edit</button>
-            <button type="button" className="btn btn-primary" onClick={() => history.push(`${url}/study`)}>Study</button>
-            <button type="button" className="btn btn-primary" onClick={() => history.push(`${url}/cards/new`)}>Add Cards</button>
+            <button type="button" className="btn btn-secondary mr-2" onClick={() => history.push(`${url}/edit`)}>Edit</button>
+            <button type="button" className="btn btn-primary mr-2" onClick={() => history.push(`${url}/study`)}>Study</button>
+            <button type="button" className="btn btn-primary mr-2" onClick={() => history.push(`${url}/cards/new`)}>Add Cards</button>
             <ul>
                 { Deck.cards && Deck.cards.length ? Deck.cards.map((card, index) => <CardView card={card} key={index} url={url}/>) : null }
             </ul>

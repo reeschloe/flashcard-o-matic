@@ -6,7 +6,7 @@ function Home() {
     const history = useHistory();
     return (
         <div>
-            <button type="button" onClick={() => history.push("/decks/new") } className="btn btn-secondary">Create Deck</button>
+            <button type="button" onClick={() => history.push("/decks/new") } className="btn btn-secondary my-2">Create Deck</button>
             <Decks />
         </div>
     )

@@ -31,16 +31,20 @@ function CreateDeck() {
             </nav>
             <h2>Create Deck</h2>
             <form onSubmit={handleSubmit}>
-                <label htmlFor="name" className="form-label">
-                    Name
-                    <input type="text" id="name" name="name" className="form-control" onChange={handleChange} value={formData.name}/>
-                </label>
-                <label htmlFor="description" className="form-label">
-                    Description
-                    <textarea id="description" type="description" name="description" className="form-control" onChange={handleChange} value={formData.description}/>
-                </label>
-                <button type="submit" className="btn btn-primary">Submit</button>
-                <button type="button" className="btn btn-secondary" onClick={() => history.push("/")}>Cancel</button>
+                <div className="form-group">
+                    <label htmlFor="name" className="form-label">
+                        Name
+                        <input type="text" id="name" name="name" className="form-control" onChange={handleChange} value={formData.name}/>
+                    </label>
+                </div>
+                <div className="form-group">
+                    <label htmlFor="description" className="form-label">
+                        Description
+                        <textarea id="description" type="description" name="description" className="form-control" onChange={handleChange} value={formData.description}/>
+                    </label>
+                </div>
+                <button type="submit" className="btn btn-primary mr-2">Submit</button>
+                <button type="button" className="btn btn-secondary mr-2" onClick={() => history.push("/")}>Cancel</button>
             </form>
         </div>
         )

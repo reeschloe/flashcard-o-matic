@@ -18,8 +18,8 @@ function CardView({card, url}) {
             <div className="card-body">
                 <h5 className="card-text">{card.front}</h5>
                 <p className="card-text">{card.back}</p>
-                <button className="btn btn-secondary" onClick={() => history.push(`${url}/cards/${card.id}/edit`)}>Edit</button>
-                <button className="btn btn-danger" onClick={() => handleDelete(card.id)}>Delete</button>
+                <button className="btn btn-secondary mr-2" onClick={() => history.push(`${url}/cards/${card.id}/edit`)}>Edit</button>
+                <button className="btn btn-danger mr-2" onClick={() => handleDelete(card.id)}>Delete</button>
             </div>
         </div>
     )

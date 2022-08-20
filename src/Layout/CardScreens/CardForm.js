@@ -32,16 +32,23 @@ function CardForm({cardId = "", deckId, card = ""}) {
 
     return (
         <form onSubmit={handleSubmit}>
+            <div className="form-group">
                 <label htmlFor="front" className="form-label">
                     Front
                     <textarea id="front" name="front" className="form-control" onChange={handleChange} value={formData.front}/>
                 </label>
+            </div>
+            <div className="form-group">
                 <label htmlFor="back" className="form-label">
                     Back
                     <textarea id="back" name="back" className="form-control" onChange={handleChange} value={formData.back}/>
                 </label>
-                <button type="submit" className="btn btn-primary">Save</button>
-                <button type="button" className="btn btn-secondary" onClick={() => history.push(`/decks/${deckId}`)}>Done</button>
+            </div>
+            <div>
+                <button type="submit" className="btn btn-primary mr-2">Save</button>
+                <button type="button" className="btn btn-secondary mr-2" onClick={() => history.push(`/decks/${deckId}`)}>Done</button>
+            </div>
+                
         </form>
     )
 }
