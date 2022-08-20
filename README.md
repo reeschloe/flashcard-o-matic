@@ -5,7 +5,7 @@ Defined routes and URLs, and used state over multiple components.
 
 ## Technology
 
-JavaScript, React, HTML and CSS. 
+JavaScript, React, HTML, CSS, and Bootstrap. 
 
 ## Installation
 
